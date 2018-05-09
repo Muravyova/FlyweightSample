@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.MainActivity">
+
+    <com.github.muravyova.flyweightsample.client.MyPictureView
+        android:id="@+id/activity_main_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:ignore="ContentDescription"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_panel"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/activity_main_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_main_list_particles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/activity_main_add"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/activity_main_btn_apply"/>
+
+        <ImageView
+            android:id="@+id/activity_main_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_plus"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_main_list_particles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/activity_main_list_particles"
+            app:layout_constraintTop_toTopOf="@+id/activity_main_list_particles"
+            tools:ignore="ContentDescription" />
+
+        <SeekBar
+            android:id="@+id/activity_main_seek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            app:layout_constraintTop_toTopOf="@+id/activity_main_btn_apply"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/activity_main_btn_apply"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_main_btn_apply" />
+
+        <Button
+            android:id="@+id/activity_main_btn_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_main_list_particles"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

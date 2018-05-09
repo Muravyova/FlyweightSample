@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FlyweightSample</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="apply">Применить</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="enter_count">Введите кол-во частиц</string>
+    <string name="image">Прикрепить картинку</string>
+    <string name="size">1 px</string>
+    <string name="create">Создать</string>
+    <string name="cancel">Отмена</string>
+</resources>
